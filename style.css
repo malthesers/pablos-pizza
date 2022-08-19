@@ -1,0 +1,1056 @@
+@import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+img,
+div {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  margin: 0 auto;
+}
+
+p {
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#screen {
+  position: relative;
+  max-width: 100%;
+  width: 100vw;
+  height: 56.25vw;
+  overflow: hidden;
+}
+
+#game {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#game_background {
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+#game_menu {
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+
+#game_elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+#game_ui {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+#shadow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 50%;
+  z-index: 19;
+}
+
+#board {
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 40vw;
+  height: 33vw;
+  top: 15vw;
+  left: 30vw;
+}
+
+#tutorial_text {
+  position: absolute;
+  left: 2vw;
+  top: 2vw;
+  color: #a67c52;
+  font-size: 2.4vw;
+  font-family: "Jua", sans-serif;
+  z-index: 21;
+  width: 36vw;
+}
+
+/*-----------------------------Start------------------------------------*/
+
+#start {
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+}
+
+/*-----------------------------themes------------------------------------*/
+
+#trophies {
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 62vw;
+  height: 50vw;
+  left: 19vw;
+  top: 3vw;
+  z-index: 20;
+}
+
+#home_button_trophies {
+  left: 70%;
+  bottom: -5%;
+}
+
+#trophy_case {
+  background-color: #a67c52;
+  border: 0.5vw solid #a67c52;
+  border-radius: 5vw;
+  width: 55vw;
+  height: 43vw;
+  margin: 3.5vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.trophy p {
+  font-family: "Jua", sans-serif;
+  color: #a67c52;
+  margin: 0;
+}
+
+.trophy_title {
+  font-size: 2.5vw;
+}
+
+.trophy_desc {
+  font-size: 1.7vw;
+}
+
+.trophy_reward {
+  font-size: 1.7vw;
+  text-align: center;
+}
+
+.trophy {
+  background-color: #eca442;
+  border: 0.5vw solid #a67c52;
+  border-radius: 5vw;
+  width: 100%;
+  height: 15vw;
+  padding: 1vw 3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.trophy_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.trophy:first-of-type {
+  margin-top: 0;
+}
+
+.trophy:last-of-type {
+  margin-bottom: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.trophy_right {
+  display: flex;
+}
+
+.trophy_icon_container {
+  border: 0.5vw solid #a67c52;
+  border-radius: 2vw;
+  height: 10vw;
+  width: 10vw;
+  align-self: center;
+}
+
+.locked {
+  opacity: 50%;
+  pointer-events: none;
+  cursor: auto;
+}
+
+/*-----------------------------themes------------------------------------*/
+
+#themes {
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 62vw;
+  height: 50vw;
+  left: 19vw;
+  top: 3vw;
+  z-index: 20;
+}
+
+#home_button_themes {
+  left: 70%;
+  bottom: -5%;
+}
+
+#theme_case {
+  width: 55vw;
+  height: 43vw;
+  margin: 3.5vw;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.theme {
+  background-color: #eca442;
+  border: 0.5vw solid #a67c52;
+  border-radius: 5vw;
+  width: 95%;
+  height: 10vw;
+  margin: 1vw auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  cursor: pointer;
+  animation-name: theme_downscale;
+  animation-iteration-count: 1;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+.theme:hover {
+  animation-name: theme_upscale;
+  animation-iteration-count: 1;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes theme_downscale {
+  0% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes theme_upscale {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+.theme p {
+  font-family: "Jua", sans-serif;
+  font-size: 4.5vw;
+  color: #a67c52;
+  margin: 2.3vw;
+}
+
+.theme .marker {
+  background-color: #eca442;
+  border: 0.5vw solid #a67c52;
+  border-radius: 5vw;
+  width: 5vw;
+  height: 5vw;
+  margin: 2.3vw;
+}
+
+.selected {
+  background-color: #a67c52;
+  border: 0.5vw solid #a67c52;
+  border-radius: 5vw;
+  width: 3vw;
+  height: 3vw;
+  margin: 0.5vw;
+}
+
+#theme_classic {
+  top: 10%;
+}
+
+#theme_azzurri {
+  top: 35%;
+}
+
+/*-----------------------------clouds------------------------------------*/
+
+#cloud_big {
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 24vw;
+  height: 15vw;
+  left: 67vw;
+  top: 1.5vw;
+  animation-name: drift_big_kf;
+  animation-iteration-count: infinite;
+  animation-duration: 15s;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes drift_big_kf {
+  100% {
+    transform: translateX(10vw);
+  }
+}
+
+#cloud_small {
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 16vw;
+  height: 9vw;
+  left: -5vw;
+  top: 15vw;
+  animation-name: drift_small_kf;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes drift_small_kf {
+  100% {
+    transform: translateX(10vw);
+  }
+}
+
+/*-----------------------------Game over------------------------------------*/
+
+#game_over {
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+#game_over_text {
+  position: absolute;
+  left: 29vw;
+  top: 13vw;
+  color: #a67c52;
+  font-size: 3vw;
+  font-family: "Jua", sans-serif;
+  z-index: 5;
+  width: 41vw;
+}
+
+#game_over_text2 {
+  position: absolute;
+  left: 29vw;
+  top: 25vw;
+  color: #a67c52;
+  font-size: 3vw;
+  font-family: "Jua", sans-serif;
+  z-index: 5;
+  width: 41vw;
+}
+
+/*-----------------------------Level complete------------------------------------*/
+
+#level_complete {
+  position: absolute;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+#level_complete_text {
+  position: absolute;
+  left: 29vw;
+  top: 13vw;
+  color: #a67c52;
+  font-size: 3vw;
+  font-family: "Jua", sans-serif;
+  z-index: 5;
+  width: 41vw;
+}
+
+#level_complete_text2 {
+  position: absolute;
+  left: 29vw;
+  top: 25vw;
+  color: #a67c52;
+  font-size: 3vw;
+  font-family: "Jua", sans-serif;
+  z-index: 5;
+  width: 41vw;
+}
+
+/*-----------------------------Knapper------------------------------------*/
+
+#restart_button {
+  left: 52.9vw;
+  top: 42.5vw;
+  z-index: 6;
+}
+
+#home_button {
+  left: 37.9vw;
+  top: 42.5vw;
+  z-index: 6;
+}
+
+#home_button2 {
+  left: 54.5vw;
+  top: 42.5vw;
+}
+
+#fullscreen_button {
+  left: 1vw;
+  bottom: 1vw;
+  z-index: 8;
+}
+
+#sound_button {
+  left: 11.5vw;
+  bottom: 1vw;
+  z-index: 8;
+}
+
+#previous_button1 {
+  left: 36.5vw;
+  top: 42.5vw;
+}
+
+#previous_button2 {
+  left: 36.5vw;
+  top: 42.5vw;
+}
+
+#previous_button3 {
+  left: 36.5vw;
+  top: 42.5vw;
+}
+
+#next_button1 {
+  left: 54.5vw;
+  top: 42.5vw;
+}
+
+#next_button2 {
+  left: 54.5vw;
+  top: 42.5vw;
+}
+
+#next_button3 {
+  left: 54.5vw;
+  top: 42.5vw;
+}
+
+.button {
+  position: absolute;
+  width: 9vw;
+  height: 9vw;
+  transform: scale(1.1);
+  cursor: pointer;
+  animation-name: button_downscale;
+  animation-iteration-count: 1;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+.button:hover {
+  animation-name: button_upscale;
+  animation-iteration-count: 1;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes button_downscale {
+  0% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes button_upscale {
+  0% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.banner {
+  position: absolute;
+  width: 10vw;
+  height: 5vw;
+  transform: scale(1.7);
+  z-index: 8;
+  cursor: pointer;
+  animation: banner_downscale;
+  animation-iteration-count: 1;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+.banner:hover {
+  animation: banner_upscale;
+  animation-iteration-count: 1;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+@keyframes banner_downscale {
+  0% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1.7);
+  }
+}
+
+@keyframes banner_upscale {
+  0% {
+    transform: scale(1.7);
+  }
+
+  100% {
+    transform: scale(2);
+  }
+}
+
+#start_button {
+  left: 45vw;
+  top: 42vw;
+}
+
+#themes_button {
+  left: 45vw;
+  top: 50vw;
+}
+
+#game_buttons {
+  position: absolute;
+  left: 44%;
+  top: 18%;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+#game_buttons img {
+  width: 15vw;
+}
+
+#unlimited_button {
+  top: 10vw;
+}
+
+#tutorial_button {
+  top: 20vw;
+}
+
+#trophies_button {
+  top: 30vw;
+}
+
+#home_button_menu {
+  left: 1vw;
+  bottom: 1vw;
+  z-index: 19;
+}
+
+/*-----------------------------score------------------------------------*/
+
+#score_board {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+}
+
+#score {
+  position: absolute;
+  left: 8vw;
+  top: 0.8vw;
+  color: #a67c52;
+  font-size: 8vw;
+  font-family: "Jua", sans-serif;
+  z-index: 6;
+  box-sizing: content-box;
+}
+
+#score_img {
+  position: absolute;
+  background-size: cover;
+  left: 0.5vw;
+  width: 7.5vw;
+  height: 9.47vw;
+  z-index: 6;
+  box-sizing: content-box;
+}
+
+#score_back {
+  position: absolute;
+  background-color: #eca442;
+  top: 0.5vw;
+  left: 4.5vw;
+  height: 8vw;
+  width: 13vw;
+  border: solid 0.5vw #a67c52;
+  border-radius: 10px;
+  z-index: 5;
+  box-sizing: content-box;
+}
+
+/*-----------------------------life------------------------------------*/
+
+#life_board {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+}
+
+#life1 {
+  position: absolute;
+  right: 0.47vw;
+  width: 8.164vw;
+  height: 9.47vw;
+}
+
+#life2 {
+  position: absolute;
+  right: 9.47vw;
+  width: 8.164vw;
+  height: 9.47vw;
+}
+
+#life3 {
+  position: absolute;
+  right: 18.94vw;
+  width: 8.164vw;
+  height: 9.47vw;
+}
+
+.life_lost {
+  animation-name: life_vanish;
+  animation-duration: 0.7s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+@keyframes life_vanish {
+  10% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+/*-----------------------------time------------------------------------*/
+
+#time_board {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  box-sizing: content-box;
+}
+
+#time_img {
+  position: absolute;
+  background-repeat: no-repeat;
+  left: 19vw;
+  top: 0.5vw;
+  width: 7.35vw;
+  height: 8.5vw;
+  z-index: 3;
+  box-sizing: content-box;
+}
+
+#time_back {
+  position: absolute;
+  width: 47.7vw;
+  height: 3.8vw;
+  top: 3vw;
+  left: 22.5vw;
+  border-radius: 10vw;
+  background-color: #cccccc;
+  transform-origin: 0% 50%;
+  box-sizing: content-box;
+}
+
+#time_container {
+  position: absolute;
+  width: 47vw;
+  height: 3vw;
+  top: 3vw;
+  left: 22.5vw;
+  border: 0.5vw solid #7f2700;
+  border-radius: 3vw;
+  z-index: 2;
+  box-sizing: content-box;
+}
+
+#time_sprite {
+  position: absolute;
+  width: 47.7vw;
+  height: 3.8vw;
+  top: 3.1vw;
+  left: 22.5vw;
+  border-radius: 10vw;
+  background-color: #eca442;
+  transform-origin: 0% 50%;
+}
+
+.time {
+  animation-name: time_shrink;
+  animation-duration: 30s;
+  animation-fill-mode: both;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  box-sizing: content-box;
+}
+
+@keyframes time_shrink {
+  0% {
+    transform: scaleX(1);
+  }
+
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+/*-----------------------------RNGs------------------------------------*/
+
+.delay0 {
+  animation-delay: 0s;
+}
+
+.delay1 {
+  animation-delay: 0.5s;
+}
+
+.delay2 {
+  animation-delay: 1s;
+}
+
+.delay3 {
+  animation-delay: 1.5s;
+}
+
+.delay4 {
+  animation-delay: 2s;
+}
+
+.delaytutorial {
+  animation-delay: 5s;
+}
+
+.pos0 {
+  top: -20vw;
+  left: 5vw;
+}
+
+.pos1 {
+  top: -20vw;
+  left: 10vw;
+}
+
+.pos2 {
+  top: -20vw;
+  left: 15vw;
+}
+
+.pos3 {
+  top: -20vw;
+  left: 20vw;
+}
+
+.pos4 {
+  top: -20vw;
+  left: 25vw;
+}
+
+.pos5 {
+  top: -20vw;
+  left: 30vw;
+}
+
+.pos6 {
+  top: -20vw;
+  left: 35vw;
+}
+
+.pos7 {
+  top: -20vw;
+  left: 40vw;
+}
+
+.pos8 {
+  top: -20vw;
+  left: 45vw;
+}
+
+.pos9 {
+  top: -20vw;
+  left: 50vw;
+}
+
+.pos10 {
+  top: -20vw;
+  left: 55vw;
+}
+
+.pos11 {
+  top: -20vw;
+  left: 60vw;
+}
+
+.pos12 {
+  top: -20vw;
+  left: 65vw;
+}
+
+.pos13 {
+  top: -20vw;
+  left: 70vw;
+}
+
+.pos14 {
+  top: -20vw;
+  left: 75vw;
+}
+
+.pos15 {
+  top: -20vw;
+  left: 80vw;
+}
+
+.pos16 {
+  top: -20vw;
+  left: 85vw;
+}
+
+.pos17 {
+  top: -20vw;
+  left: 90vw;
+}
+
+/*-----------------------------containers-and-sprites------------------------------------*/
+
+.container {
+  position: absolute;
+  cursor: pointer;
+}
+
+#pineapple1_sprite {
+  background-size: cover;
+  width: auto;
+  height: 12vw;
+}
+
+#pineapple2_sprite {
+  background-size: cover;
+  width: auto;
+  height: 12vw;
+}
+
+#pineapple3_sprite {
+  background-size: cover;
+  width: auto;
+  height: 12vw;
+}
+
+#pineapple_sprite_tutorial {
+  background-size: cover;
+  width: auto;
+  height: 12vw;
+}
+
+#tomato_sprite {
+  background-size: cover;
+  width: auto;
+  height: 15vw;
+}
+
+#shroom_sprite {
+  background-size: cover;
+  width: auto;
+  height: 10vw;
+}
+
+#olives_sprite {
+  background-size: cover;
+  width: auto;
+  height: 10vw;
+}
+
+#onion_sprite {
+  background-size: cover;
+  width: auto;
+  height: 14vw;
+}
+
+/*-----------------------------Utility-klasser------------------------------------*/
+
+.pause {
+  animation-play-state: paused;
+  pointer-events: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.highlight {
+  z-index: 20 !important;
+}
+
+/*-----------------------------Animationer------------------------------------*/
+
+.fallspeed_1 {
+  animation-name: fallspeed1_kf;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes fallspeed1_kf {
+  0% {
+    transform: translateY(-10vw);
+  }
+
+  100% {
+    transform: translateY(80vw);
+  }
+}
+
+.fallspeed_2 {
+  animation-name: fallspeed2_kf;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes fallspeed2_kf {
+  0% {
+    transform: translateY(-10vw);
+  }
+
+  100% {
+    transform: translateY(80vw);
+  }
+}
+
+.fallspeed_3 {
+  animation-name: fallspeed3_kf;
+  animation-duration: 2.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes fallspeed3_kf {
+  0% {
+    transform: translateY(-10vw);
+  }
+
+  100% {
+    transform: translateY(80vw);
+  }
+}
+
+.fallspeed_tutorial {
+  animation-name: fallspeed_tutorial;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+@keyframes fallspeed_tutorial {
+  0% {
+    transform: translateY(-10vw);
+  }
+
+  100% {
+    transform: translateY(45vw);
+  }
+}
+
+.hit_left {
+  animation-name: hit_left_kf;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes hit_left_kf {
+  100% {
+    transform: translate(-100vw, -30vw);
+  }
+}
+
+.hit_right {
+  animation-name: hit_right_kf;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+@keyframes hit_right_kf {
+  100% {
+    transform: translate(100vw, -30vw);
+  }
+}

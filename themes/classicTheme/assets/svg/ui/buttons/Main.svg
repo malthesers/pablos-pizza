@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 138 138">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #eca442;
+      }
+
+      .cls-4 {
+        stroke: #a67c52;
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+
+      .cls-5 {
+        fill: #597718;
+      }
+    </style>
+    <clipPath id="clip-path" transform="translate(-0.0004)">
+      <rect class="cls-1" width="138" height="138"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g id="Main">
+        <g class="cls-2">
+          <g class="cls-2">
+            <path class="cls-3" d="M133.0004,69a64,64,0,1,1-64-64,63.99965,63.99965,0,0,1,64,64" transform="translate(-0.0004)"/>
+            <circle class="cls-4" cx="69" cy="69" r="64"/>
+            <rect class="cls-5" x="39" y="65" width="60" height="45" rx="1.5"/>
+            <path class="cls-5" d="M97.5004,108.5h-57v-42h57Zm0-45h-57a2.99981,2.99981,0,0,0-3,3v42a2.99981,2.99981,0,0,0,3,3h57a3.00046,3.00046,0,0,0,3-3v-42a3.00046,3.00046,0,0,0-3-3" transform="translate(-0.0004)"/>
+            <path class="cls-5" d="M30.099,68a1.5,1.5,0,0,1-1.082-2.539l38.901-40.5a1.50027,1.50027,0,0,1,2.164,0l38.901,40.5A1.5,1.5,0,0,1,107.901,68Z" transform="translate(-0.0004)"/>
+            <path class="cls-5" d="M69.0004,26l19.45,20.25,19.45,20.25H30.0994l19.45-20.25L69.0004,26m0-3a2.999,2.999,0,0,0-2.164.922l-19.45,20.25-19.45,20.25a2.99948,2.99948,0,0,0,2.163,5.078h77.801a2.99948,2.99948,0,0,0,2.163-5.078l-19.45-20.25-19.45-20.25A2.9984,2.9984,0,0,0,69.0004,23" transform="translate(-0.0004)"/>
+            <path class="cls-3" d="M69.0004,123.5h0a11.49907,11.49907,0,0,1-11.5-11.5V92a11.5,11.5,0,0,1,23,0v20a11.49972,11.49972,0,0,1-11.5,11.5" transform="translate(-0.0004)"/>
+            <path class="cls-5" d="M91.9457,30.5h-3.258a3.37068,3.37068,0,0,0-3.371,3.371V50.129a3.37068,3.37068,0,0,0,3.371,3.371h3.258a3.37068,3.37068,0,0,0,3.371-3.371V33.871a3.37068,3.37068,0,0,0-3.371-3.371" transform="translate(-0.0004)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pablo's Pizza</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+
+<body>
+    <div id="screen">
+        <div id="shadow" class="hidden"></div>
+        <div id="start" style="background-image: url(themes/classicTheme/assets/svg/screens/startscreen.svg)">
+            <div id="cloud_big" style="background-image: url(themes/classicTheme/assets/svg/exterior/cloud_big.svg)"></div>
+            <div id="cloud_small" style="background-image: url(themes/classicTheme/assets/svg/exterior/cloud_small.svg)"></div>
+            <img id="start_button" class="banner" src="themes/classicTheme/assets/svg/ui/banners/Start.svg">
+            <img id="themes_button" class="banner" src="themes/classicTheme/assets/svg/ui/banners/Themes.svg">
+            <img id="fullscreen_button" class="button" src="themes/classicTheme/assets/svg/ui/buttons/Fullscreen_on.svg">
+            <img id="sound_button" class="button" src="themes/classicTheme/assets/svg/ui/buttons/Sound_on.svg">
+        </div>
+        <div id="game">
+            <div id="board" class="hidden highlight" style="background-image: url(themes/classicTheme/assets/svg/ui/Board.svg)">
+                <p id="tutorial_text"></p>
+            </div>
+            <div id="game_menu" class="hidden" style="background-image: url(themes/classicTheme/assets/svg/screens/gamescreen.svg)">
+                <div id="game_buttons">
+                    <img id="standard_button" class="banner locked" src="themes/classicTheme/assets/svg/ui/banners/Standard.svg">
+                    <img id="unlimited_button" class="banner locked" src="themes/classicTheme/assets/svg/ui/banners/Unlimited.svg">
+                    <img id="tutorial_button" class="banner" src="themes/classicTheme/assets/svg/ui/banners/Tutorial.svg">
+                    <img id="trophies_button" class="banner" src="themes/classicTheme/assets/svg/ui/banners/Trophies.svg">
+                </div>
+                <img id="home_button_menu" class="button" src="themes/classicTheme/assets/svg/ui/buttons/Main.svg">
+            </div>
+            <div id="game_background" class="hidden" style="background-image: url(themes/classicTheme/assets/svg/screens/gamescreen.svg)">
+                <div id="game_ui">
+                    <div id="score_board">
+                        <div id="score"></div>
+                        <div id="score_img" style="background-image: url(themes/classicTheme/assets/svg/ui/Score.svg)"></div>
+                        <div id="score_back"></div>
+                    </div>
+                    <div id="life_board">
+                        <div id="life1" style="background-image: url(themes/classicTheme/assets/svg/ui/Life.svg)"></div>
+                        <div id="life2" style="background-image: url(themes/classicTheme/assets/svg/ui/Life.svg)"></div>
+                        <div id="life3" style="background-image: url(themes/classicTheme/assets/svg/ui/Life.svg)"></div>
+                    </div>
+                    <div id="time_board">
+                        <div id="time_img" style="background-image: url(themes/classicTheme/assets/svg/ui/Hourglass.svg)"></div>
+                        <div id="time_back"></div>
+                        <div id="time_container"></div>
+                        <div id="time_sprite"></div>
+                    </div>
+                </div>
+                <div id="game_elements">
+                    <div id="pineapple_container_tutorial" class="container hidden">
+                        <img id="pineapple_sprite_tutorial" src="themes/classicTheme/assets/svg/characters/Pineapple.svg">
+                    </div>
+                    <div id="pineapple1_container" class="container">
+                        <img id="pineapple1_sprite" src="themes/classicTheme/assets/svg/characters/Pineapple.svg">
+                    </div>
+                    <div id="pineapple2_container" class="container">
+                        <img id="pineapple2_sprite" src="themes/classicTheme/assets/svg/characters/Pineapple.svg">
+                    </div>
+                    <div id="pineapple3_container" class="container">
+                        <img id="pineapple3_sprite" src="themes/classicTheme/assets/svg/characters/Pineapple.svg">
+                    </div>
+                    <div id="tomato_container" class="container">
+                        <img id="tomato_sprite" src="themes/classicTheme/assets/svg/characters/Tomato.svg">
+                    </div>
+                    <div id="shroom_container" class="container">
+                        <img id="shroom_sprite" src="themes/classicTheme/assets/svg/characters/Mushroom.svg">
+                    </div>
+                    <div id="olives_container" class="container">
+                        <img id="olives_sprite" src="themes/classicTheme/assets/svg/characters/Olives.svg">
+                    </div>
+                    <div id="onion_container" class="container">
+                        <img id="onion_sprite" src="themes/classicTheme/assets/svg/characters/Onion.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="game_over" class="hidden" style="background-image: url(themes/classicTheme/assets/svg/screens/endscreen_gameover.svg)">
+            <p id="game_over_text"></p>
+            <p id="game_over_text2"></p>
+        </div>
+        <div id="level_complete" class="hidden" style="background-image: url(themes/classicTheme/assets/svg/screens/endscreen_levelcomplete.svg)">
+            <p id="level_complete_text"></p>
+            <p id="level_complete_text2"></p>
+        </div>
+        <div id="themes" class="hidden" style="background-image: url(themes/classicTheme/assets/svg/ui/Board.svg)">
+            <div id="theme_case">
+                <div id="theme_classic" class="theme">
+                    <p>Classic</p>
+                    <div class="marker">
+                        <div class="selector selected"></div>
+                    </div>
+                </div>
+                <div id="theme_pineapple" class="theme locked">
+                    <p>Pineapple Power</p>
+                    <div class="marker">
+                        <div class="selector"></div>
+                    </div>
+                </div>
+                <div id="theme_azzurri" class="theme locked hidden">
+                    <p>Azzurri</p>
+                    <div class="marker">
+                        <div class="selector"></div>
+                    </div>
+                </div>
+                <img id="home_button_themes" class="button" src="themes/classicTheme/assets/svg/ui/buttons/Main.svg">
+            </div>
+        </div>
+        <div id="trophies" class="hidden" style="background-image: url(themes/classicTheme/assets/svg/ui/Board.svg)">
+            <div id="trophy_case">
+                <div id="trophy_tutorial" class="trophy locked">
+                    <div class="trophy_left">
+                        <div>
+                            <p class="trophy_title">Pablo's First Pizza</p>
+                            <p class="trophy_desc">Complete the Tutorial accessible from the game mode selection menu.</p>
+                        </div>
+                        <p class="trophy_reward">Reward: Unlocks Standard Mode</p>
+                    </div>
+                    <div class="trophy_right">
+                        <div class="trophy_icon_container"></div>
+                    </div>
+                </div>
+                <div id="trophy_standard" class="trophy locked">
+                    <div class="trophy_left">
+                        <div>
+                            <p class="trophy_title">Saviour of Pablo's Pizza</p>
+                            <p class="trophy_desc">Beat the Standard game mode accessible from the game mode selection menu.</p>
+                        </div>
+                        <p class="trophy_reward">Reward: Unlocks Unlimited Mode</p>
+                    </div>
+                    <div class="trophy_right">
+                        <div class="trophy_icon_container"></div>
+                    </div>
+                </div>
+                <div id="trophy_perfect" class="trophy locked">
+                    <div class="trophy_left">
+                        <div>
+                            <p class="trophy_title">Pineapple Perfection</p>
+                            <p class="trophy_desc">Beat the Standard game mode without losing any lives.</p>
+                        </div>
+                        <p class="trophy_reward">Reward: Pineapple Power Theme</p>
+                    </div>
+                    <div class="trophy_right">
+                        <div class="trophy_icon_container"></div>
+                    </div>
+                </div>
+                <div id="trophy_assassin" class="trophy locked">
+                    <div class="trophy_left">
+                        <div>
+                            <p class="trophy_title">Ananasassassination</p>
+                            <p class="trophy_desc">Beat the Standard game using the Pineapple Power Theme.</p>
+                        </div>
+                        <p class="trophy_reward"></p>
+                    </div>
+                    <div class="trophy_right">
+                        <div class="trophy_icon_container"></div>
+                    </div>
+                </div>
+                <div id="trophy_99" class="trophy locked">
+                    <div class="trophy_left">
+                        <div>
+                            <p class="trophy_title">99 Problems But My Kitch Ain't One</p>
+                            <p class="trophy_desc">Get exactly 99 points in the Unlimited game mode.</p>
+                        </div>
+                        <p class="trophy_reward"></p>
+                    </div>
+                    <div class="trophy_right">
+                        <div class="trophy_icon_container"></div>
+                    </div>
+                </div>
+                <div id="trophy_unl300" class="trophy locked">
+                    <div class="trophy_left">
+                        <div>
+                            <p class="trophy_title">This is Sparta!</p>
+                            <p class="trophy_desc">Get more than 300 points in the Unlimited game mode.</p>
+                        </div>
+                        <p class="trophy_reward"></p>
+                    </div>
+                    <div class="trophy_right">
+                        <div class="trophy_icon_container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="buttons">
+            <img id="home_button" class="button" src="themes/classicTheme/assets/svg/ui/buttons/Main.svg">
+            <img id="restart_button" class="button" src="themes/classicTheme/assets/svg/ui/buttons/Replay.svg">
+            <img id="settings_button" class="hidden button" src="themes/classicTheme/assets/svg/ui/buttons/Settings.svg">
+            <img id="next_button1" class="hidden button highlight" src="themes/classicTheme/assets/svg/ui/buttons/Next.svg">
+            <img id="next_button2" class="hidden button highlight" src="themes/classicTheme/assets/svg/ui/buttons/Next.svg">
+            <img id="next_button3" class="hidden button highlight" src="themes/classicTheme/assets/svg/ui/buttons/Next.svg">
+            <img id="previous_button1" class="hidden button highlight" src="themes/classicTheme/assets/svg/ui/buttons/Previous.svg">
+            <img id="previous_button2" class="hidden button highlight" src="themes/classicTheme/assets/svg/ui/buttons/Previous.svg">
+            <img id="previous_button3" class="hidden button highlight" src="themes/classicTheme/assets/svg/ui/buttons/Previous.svg">
+            <img id="home_button2" class="hidden button highlight" src="themes/classicTheme/assets/svg/ui/buttons/Main.svg">
+        </div>
+    </div>
+    <div>
+        <audio src="themes/classicTheme/music/tarantella_napoletana.mp3" id="music"></audio>
+        <audio src="themes/classicTheme/music/funeral_march.mp3" id="death"></audio>
+        <audio src="themes/classicTheme/music/splat.mp3" id="splat"></audio>
+        <audio src="themes/classicTheme/music/button.mp3" id="button"></audio>
+    </div>
+    <script src="script.js"></script>
+    <script src="tutorial.js"></script>
+    <script src="themes.js"></script>
+    <script src="trophies.js"></script>
+</body></html>

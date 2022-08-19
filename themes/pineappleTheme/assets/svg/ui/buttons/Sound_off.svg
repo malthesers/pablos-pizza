@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 138 137.99999">
+  <defs>
+    <style>
+      .cls-1, .cls-4, .cls-6 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #eca442;
+      }
+
+      .cls-4 {
+        stroke: #a67c52;
+        stroke-miterlimit: 10;
+        stroke-width: 10px;
+      }
+
+      .cls-5 {
+        fill: #597718;
+      }
+
+      .cls-6 {
+        stroke: #597718;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+      }
+    </style>
+    <clipPath id="clip-path" transform="translate(0.0002 -0.00011)">
+      <rect class="cls-1" width="138" height="138"/>
+    </clipPath>
+  </defs>
+  <g id="Layer_2" data-name="Layer 2">
+    <g id="Layer_1-2" data-name="Layer 1">
+      <g id="Sound_off" data-name="Sound off">
+        <g class="cls-2">
+          <g class="cls-2">
+            <path class="cls-3" d="M132.9998,69.0001a64,64,0,1,1-64-64,63.99965,63.99965,0,0,1,64,64" transform="translate(0.0002 -0.00011)"/>
+            <circle class="cls-4" cx="69" cy="68.99999" r="64"/>
+            <polygon class="cls-5" points="74 28.384 74 108.968 47.25 89.272 47.25 47.426 74 28.384"/>
+            <polygon class="cls-6" points="74 28.384 74 108.968 47.25 89.272 47.25 47.426 74 28.384"/>
+            <rect class="cls-5" x="22.5002" y="47.2869" width="27.106" height="42.087"/>
+            <rect class="cls-6" x="22.5002" y="47.2869" width="27.106" height="42.087"/>
+            <path class="cls-5" d="M118.7137,49.8644h0a4.43009,4.43009,0,0,1,0,6.265l-31.163,31.162a4.42967,4.42967,0,0,1-6.265-6.264l31.163-31.163a4.43011,4.43011,0,0,1,6.265,0" transform="translate(0.0002 -0.00011)"/>
+            <path class="cls-6" d="M118.7137,49.8644h0a4.43009,4.43009,0,0,1,0,6.265l-31.163,31.162a4.42967,4.42967,0,0,1-6.265-6.264l31.163-31.163A4.43011,4.43011,0,0,1,118.7137,49.8644Z" transform="translate(0.0002 -0.00011)"/>
+            <path class="cls-5" d="M81.2859,50.2862h0a4.43189,4.43189,0,0,0,0,6.265l31.163,31.163a4.43009,4.43009,0,0,0,6.265,0v-.001a4.42889,4.42889,0,0,0,0-6.264l-31.163-31.163a4.4301,4.4301,0,0,0-6.265,0" transform="translate(0.0002 -0.00011)"/>
+            <path class="cls-6" d="M81.2859,50.2862h0a4.43189,4.43189,0,0,0,0,6.265l31.163,31.163a4.43009,4.43009,0,0,0,6.265,0v-.001a4.42889,4.42889,0,0,0,0-6.264l-31.163-31.163A4.4301,4.4301,0,0,0,81.2859,50.2862Z" transform="translate(0.0002 -0.00011)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
