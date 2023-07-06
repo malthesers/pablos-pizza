@@ -6,15 +6,15 @@ Help the famous restaurant [Pablo's Pizza](https://malthesers.github.io/pablos-p
 
 ## 📋 Instructions
 
-### Tutorial
+### 📚 Tutorial
 
-Start with the tutorial in-game! It will guide you through the game's mechanics.
+Start with the in-game tutorial! It will guide you through the game's mechanics.
 
-### Standard
+### ⏱️ Standard
 
-The normal game mode - winning requires surviving the time duration and ending with 20 or more points.
+The standard game mode - winning requires surviving the time duration and ending with 20 or more points.
 
-### Unlimited
+### ♾️ Unlimited
 
 The unlimited game mode unlocked by completing the standard one. No time limit - you play till you lose all lives.
 
