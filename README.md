@@ -34,3 +34,4 @@ The unlimited game mode unlocked by completing the standard one. No time limit -
 | Theme | Description | Source |
 | ------------- | ------------- | ------------- |
 | Classic | The classic Pablo's Pizza theme. | Default |
+| Pineapple Power | Replaces all ingredients with pineapples. | Trophy: Pineapple Perfection |
