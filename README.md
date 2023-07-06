@@ -18,7 +18,7 @@ The normal game mode - winning requires surviving the time duration and ending w
 
 The unlimited game mode unlocked by completing the standard one. No time limit - you play till you lose all lives.
 
-## Trophies
+## 🏆 Trophies
 
 | Title  | Description | Reward |
 | ------------- | ------------- | ------------- |
