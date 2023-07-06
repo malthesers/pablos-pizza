@@ -4,7 +4,7 @@ Made as part of KEA's multimedia design, during first semester's animation cours
 
 Help the famous restaurant [Pablo's Pizza](https://malthesers.github.io/pablos-pizza/)!
 
-## 📋 Instructions
+## 🎮 Game modes
 
 ### 📚 Tutorial
 
