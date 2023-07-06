@@ -29,7 +29,7 @@ The unlimited game mode unlocked by completing the standard one. No time limit -
 | 99 Problems But My Kitch Ain't One | Get exactly 99 points in the Unlimited game mode. |
 | This is Sparta! | Get more than 300 points in the Unlimited game mode. |
 
-## Themes
+## 🖼️ Themes
 
 | Theme | Description | Source |
 | ------------- | ------------- | ------------- |
