@@ -1,4 +1,4 @@
-# ![pablos pizza logo](https://github.com/malthesers/pablos-pizza/blob/main/favicon/favicon-32x32.png) Pablo's Pizza
+# <img src="/favicon/favicon-32x32.png" alt="pablo's pizza icon" align="center"> Pablo's Pizza
 
 Made as part of KEA's multimedia design, during first semester's animation course.
 
