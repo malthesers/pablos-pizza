@@ -22,7 +22,7 @@ The unlimited game mode unlocked by completing the standard one. No time limit -
 
 | Trophy | Description | Reward |
 | ------------- | ------------- | ------------- |
-| Pablo's First Pizza | Complete the Tutorial accessible from the game mode selection menu. | Unlocks Standard Mod |
+| Pablo's First Pizza | Complete the Tutorial accessible from the game mode selection menu. | Unlocks Standard Mode |
 | Saviour of Pablo's Pizza | Beat the Standard game mode accessible from the game mode selection menu.  | Unlocks Unlimited Mode  |
 | Pineapple Perfection | Beat the Standard game mode without losing any lives. | Pineapple Power Theme |
 | Ananasassassination | Beat the Standard game using the Pineapple Power Theme. |
